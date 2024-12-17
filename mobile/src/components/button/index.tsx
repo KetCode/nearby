@@ -5,7 +5,7 @@ import { s } from "./styles"
 import { colors } from "@/styles/theme"
 
 type ButtonProps = TouchableOpacityProps & {
-isLoading?: boolean
+    isLoading?: boolean
 }
 
 function Button({ children, style, isLoading = false, ...rest }: ButtonProps) {
@@ -26,15 +26,15 @@ return (
 }
 
 function Title({ children }: TextProps) {
-return <Text style={s.title}>{children}</Text>
+    return <Text style={s.title}>{children}</Text>
 }
 
 type IconProps = {
-icon: React.ComponentType<TablerIconProps>
+    icon: React.ComponentType<TablerIconProps>
 }
 
 function Icon({ icon: Icon }: IconProps) {
-return <Icon size={24} color={colors.gray[100]} />
+    return <Icon size={24} color={colors.gray[100]} />
 }
 
 Button.Title = Title
